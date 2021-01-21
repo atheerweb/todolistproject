@@ -7,3 +7,45 @@ html{
     box-sizing: border-box;
 }
 
+@font-face{
+    src: url(../fonts/Cairo-Regular.ttf);
+    font-family: "Cairo";
+}
+body{
+    min-height: 100vh;
+}
+header , form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height:20vh;
+    font-size: 1.2rem;
+}
+header h1{
+    color:#0272e2;
+}
+.todo__input , .todo__button {
+    padding:3px;
+    border:none;
+    background: white;
+    font-size: 1.2rem;
+    box-shadow: 0px 1px 5px rgba(100, 100, 100) ;
+    border-radius: 1px;
+    font-family:'Cairo';
+}
+.todo__input{
+    width:280px;
+}
+.todo__button{
+    margin-right:40px;
+    border-radius: 20px;
+    padding:10px;
+    cursor: pointer;
+}
+
+
+.plus{
+    position: relative;
+    top:3.5px;
+    transform: rotate(90deg);
+}
