@@ -31,19 +31,17 @@ let addTodo = (event) => {
     //Append todo item
     todoList.appendChild(todoDiv)
 }
-//remove to do
-/*
-const items = document.querySelectorAll('.times__button')
 
-for(let item of items){
-    item.addEventListener ('click' , () => item.parentElement.remove());
-}
-*/
 let removeF = (event) => {
     const  it  = event.target
+    //animation of removal
     if ( it.classList[0] === "times__button" ){
-        it.parentElement.remove()
+        const todoContainer = it.parentElement
+        todoContainer.classList.add('animation')
+        //removing transition element
+        todoContainer.addEventListener('transitionend' , () => it.parentElement.remove())
     }
+    
      if( it.classList[0] === "complete__button" ){
         it.parentElement.classList.toggle('completed')
     }

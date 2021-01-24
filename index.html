@@ -11,20 +11,28 @@
 </head>
 
 <body>
-    <header>
-        <h1>قائمة أعمالي</h1>
-    </header>
-    <form>
-        <input type="text" class="todo__input">
-        <button class="todo__button" type="submit">
-            <i class="fas fa-plus" style="color:#ffbf00;"></i>
-        </button>
-    </form>
-    <div class="container">
-        <ul class="todo__list">
-
-        </ul>
+    <div class="page__holder">
+        <header>
+            <h1>قائمة أعمالي</h1>
+        </header>
+        <form>
+            <select name="todo" id="todo__filter">
+                <option value="all">الكل</option>
+                <option value="completed">تم انجازه</option>
+                <option value="uncompleted">لم ينجز بعد</option>
+            </select>
+            <input type="text" class="todo__input">
+            <button class="todo__button" type="submit">
+                <i class="fas fa-plus" ></i>
+            </button>
+        </form>
+        <div class="container">
+            <ul class="todo__list">
+    
+            </ul>
+        </div>   
     </div>
+  
 
     <script src="assets/js/script.js"></script>
     <script src="assets/js/all.min.js"></script>
