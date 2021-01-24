@@ -53,3 +53,39 @@ header h1{
     transform: rotate(90deg);
 }
 /* to do list stlying */
+.todo{
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:auto;
+    max-width:38%;
+}
+.todo__item{
+    list-style: none;
+    padding:3px;
+    font-size: 1.2rem;
+    flex: 1;
+}
+.complete__button , 
+.times__button  {
+    background: none;
+    border:none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin:10px;
+    padding:1px;
+}
+.complete__button{
+    color:#0272e2;
+}
+.times__button{
+    color:tomato;
+}
+.fa-check,
+.fa-times{
+    pointer-events: none;
+}
+.completed{
+    text-decoration: line-through;
+    opacity: 50%;
+}
