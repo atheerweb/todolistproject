@@ -134,3 +134,15 @@ header h1 {
 .container {
     width: 100%;
 }
+
+@media screen and (min-width:370px){
+    header{
+        font-size: 1.2rem;
+    }
+    .todo__input{
+        font-size:1.2rem
+    }
+    #todo__filter{
+        width:80px;
+    }
+}
