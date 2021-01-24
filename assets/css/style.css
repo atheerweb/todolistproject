@@ -1,114 +1,136 @@
-*{
-    padding:0;
-    margin:0;
+* {
+    padding: 0;
+    margin: 0;
 }
-html{
+
+html {
     box-sizing: border-box;
-    font-family:"Cairo";
+    font-family: "Cairo";
     direction: rtl;
     box-sizing: border-box;
 }
 
-@font-face{
+@font-face {
     src: url(../fonts/Cairo-Regular.ttf);
     font-family: "Cairo";
 }
-.page__holder{
+
+.page__holder {
     min-height: 100vh;
-    margin: 0 20px 
+    margin: 0 20px
 }
-header , form{
+
+header,
+form {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height:20vh;
+    min-height: 20vh;
+    font-size: 1rem;
+
+}
+
+header h1 {
+    color: #0272e2;
+}
+
+.todo__input,
+.todo__button {
+    padding: 2px;
+    border: none;
+    background: white;
+    box-shadow: 0px 1px 5px rgba(100, 100, 100);
+    border-radius: 10px;
+    font-family: 'Cairo';
     font-size: 1rem;
 }
 
-header h1{
-    color:#0272e2;
+.todo__input {
+    width: 280px;
 }
-.todo__input , .todo__button {
-    padding:2px;
-    border:none;
-    background: white;
-    box-shadow: 0px 1px 5px rgba(100, 100, 100) ;
-    border-radius: 10px;
-    font-family:'Cairo';
-}
-.todo__input{
-    width:280px;
-}
-.todo__button{
+
+.todo__button {
     border-radius: 20px;
-    padding:10px;
+    padding: 10px;
     cursor: pointer;
-    padding:1px 8px; 
+    padding: 1px 8px;
     margin-right: 15px;
 }
 
 
-.plus{
+.plus {
     position: relative;
-    top:3.5px;
+    top: 3.5px;
     transform: rotate(90deg);
 }
+
 /* to do list stlying */
-.todo{
+.todo {
     display: flex;
-    justify-content:space-between;
-    align-items:center;
-    margin:auto;
-    width:100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    width: 100%;
     transition: all 350ms ease;
 }
-.todo__item{
+
+.todo__item {
     list-style: none;
-    padding:3px;
+    padding: 3px;
     font-size: 1.2rem;
     flex: 1;
 }
-.complete__button , 
-.times__button  {
+
+.complete__button,
+.times__button {
     background: none;
-    border:none;
+    border: none;
     font-size: 1.2rem;
     cursor: pointer;
-    margin:10px;
-    padding:1px;
+    margin: 10px;
+    padding: 1px;
 }
-.complete__button{
-    color:#0272e2;
+
+.complete__button {
+    color: #0272e2;
 }
-.times__button{
-    color:#ffbf00;
-    margin : 10px 10px 10px 0;
+
+.times__button {
+    color: #ffbf00;
+    margin: 10px 10px 10px 0;
 }
+
 .fa-check,
-.fa-times{
+.fa-times {
     pointer-events: none;
 }
-.completed{
+
+.completed {
     text-decoration: line-through;
     opacity: 50%;
 }
-.animation{
-    transition: all 350 ease ;
+
+.animation {
+    transition: all 350 ease;
     opacity: 0;
 }
-#todo__filter{
+
+#todo__filter {
     background: none;
     border: none;
     font-family: "Cairo";
     direction: rtl;
-    color:#0272e2;
-    width:60px;
-    margin-left:10px;
+    color: #0272e2;
+    width: 60px;
+    margin-left: 10px;
+    font-size:1rem;
 }
-.fa-plus{
-    color:#ffbf00;
-    
+
+.fa-plus {
+    color: #ffbf00;
+
 }
-.container{
-    width:100%;
+
+.container {
+    width: 100%;
 }
