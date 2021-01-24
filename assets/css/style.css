@@ -121,9 +121,8 @@ header h1 {
     font-family: "Cairo";
     direction: rtl;
     color: #0272e2;
-    width: 60px;
     margin-left: 10px;
-    font-size:1rem;
+    font-size:1rem
 }
 
 .fa-plus {
@@ -141,8 +140,5 @@ header h1 {
     }
     .todo__input{
         font-size:1.2rem
-    }
-    #todo__filter{
-        width:80px;
     }
 }
