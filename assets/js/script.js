@@ -48,6 +48,7 @@ let removeF = (event) => {
   if (it.classList[0] === "complete__button") {
     it.parentElement.classList.toggle("completed");
   }
+  removeFromLocalStorage()
 };
 // filter function
 let filterTodo = (e) => {
@@ -94,28 +95,39 @@ let getTodo = () => {
   } else {
     todos = JSON.parse(localStorage.getItem("todos"));
   }
-  todos.forEach(function (tod) {
-  //todo div
-  const todoDiv = document.createElement("div");
-  todoDiv.classList.add("todo");
-  //todo li
-  const newTodo = document.createElement("li");
-  newTodo.classList.add("todo__item");
-  newTodo.innerHTML = tod;
-  todoDiv.appendChild(newTodo);
-  //Complete button
-  const completeButton = document.createElement("button");
-  completeButton.classList.add("complete__button");
-  completeButton.innerHTML = '<i class="fas fa-check"></i>';
-  todoDiv.appendChild(completeButton);
-  //Trash button
-  const timesButton = document.createElement("button");
-  timesButton.classList.add("times__button");
-  timesButton.innerHTML = '<i class="fas fa-times"></i>';
-  todoDiv.appendChild(timesButton);
-  //Append todo item
-  todoList.appendChild(todoDiv);
+  todos.forEach(function (todo) {
+    //todo div
+    const todoDiv = document.createElement("div");
+    todoDiv.classList.add("todo");
+    //todo li
+    const newTodo = document.createElement("li");
+    newTodo.classList.add("todo__item");
+    newTodo.innerHTML = todo;
+    todoDiv.appendChild(newTodo);
+    //Complete button
+    const completeButton = document.createElement("button");
+    completeButton.classList.add("complete__button");
+    completeButton.innerHTML = '<i class="fas fa-check"></i>';
+    todoDiv.appendChild(completeButton);
+    //Trash button
+    const timesButton = document.createElement("button");
+    timesButton.classList.add("times__button");
+    timesButton.innerHTML = '<i class="fas fa-times"></i>';
+    todoDiv.appendChild(timesButton);
+    //Append todo item
+    todoList.appendChild(todoDiv);
   });
+};
+//remove from local stoarge
+let removeFromLocalStorage = (todo) => {
+  let todos;
+  if (localStorage.getItem("todos") === null) {
+    todos = [];
+  } else {
+    todos = JSON.parse(localStorage.getItem("todos"));
+    todos.splice(todos , 1);
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }
 };
 //Event listeners
 todoButton.addEventListener("click", addTodo);
