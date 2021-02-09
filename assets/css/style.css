@@ -115,14 +115,14 @@ header h1 {
     opacity: 0;
 }
 
-#todo__filter {
+.todo__filter {
     background: none;
     border: none;
     font-family: "Cairo";
     direction: rtl;
     color: #0272e2;
     margin-left: 10px;
-    font-size:1rem
+    font-size: 1rem
 }
 
 .fa-plus {
@@ -134,11 +134,35 @@ header h1 {
     width: 100%;
 }
 
-@media screen and (min-width:370px){
-    header{
+@media screen and (min-width:370px) {
+    header {
         font-size: 1.2rem;
     }
-    .todo__input{
-        font-size:1.2rem
+
+    .todo__input {
+        font-size: 1.2rem
+    }
+}
+
+@media screen and (min-width:768px) {
+    .todo {
+        width: 55%;
+    }
+}
+
+@media screen and (min-width:1023px) {
+    .todo {
+        width: 42%;
+    }
+}
+
+@media screen and (min-width:1123px) {
+    .todo {
+        width: 38%;
+    }
+}
+@media screen and (min-width:1348px) {
+    .todo {
+        width: 31%;
     }
 }
